@@ -1,0 +1,42 @@
+*{margin: 0;
+padding: 0;box-sizing: border-box;}
+
+main{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.centerbox
+{
+    background-color: white;
+    padding: 30px;
+    min-height: 30vh;
+}
+.centerbox button{
+    padding: 12px 15px;
+    background: none;
+    color: white;
+    background-color: tomato;
+    border: none;
+    width: 100%;
+    margin: 5px;
+    cursor: pointer;
+
+}
+.centerbox .output{
+    border: 1px solid black;
+    margin: 10px 0px;
+    height: 20vh;
+}
+.centerbox .buttons{
+    margin: 5px 0px;
+    display: flex;
+}
+.centerbox h1{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 60px;
+    color: olive;
+}

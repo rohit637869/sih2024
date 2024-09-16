@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speech to Text</title>
+  <link rel="stylesheet" href="css/speech.css">
+</head>
+<body>
+  <main>
+    <div class="centerbox">
+      <h1>Speech to Text</h1>
+      <div class="buttons">
+
+        <button id="start">Start Listening</button>
+        <button id="stop">Stop Listening</button>
+      </div>
+      <div class="output">
+        <p id="output"></p>
+      </div>
+    </div>
+  </main>
+  
+
+  <script>
+    const output = document.getElementById('output');
+    const startButton = document.getElementById('start');
+    const stopButton = document.getElementById('stop');
+    
+    const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+    recognition.interimResults = true;  // This allows you to see partial text while speaking.
+    recognition.continuous = true;  // Keep listening until explicitly stopped.
+    
+    // Event fired when speech is recognized
+    recognition.onresult = function(event) {
+      let transcript = '';
+      for (let i = event.resultIndex; i < event.results.length; i++) {
+        transcript += event.results[i][0].transcript;
+      }
+      output.textContent = transcript;
+    };
+    
+    // Event listener to start the recognition
+    startButton.addEventListener('click', () => {
+      recognition.start();
+      output.textContent = 'Listening...';
+    });
+    
+    // Event listener to stop the recognition
+    stopButton.addEventListener('click', () => {
+      recognition.stop();
+      output.textContent += ' (Stopped Listening)';
+    });
+    
+    // Error handling
+    recognition.onerror = function(event) {
+      output.textContent = 'Error occurred in recognition: ' + event.error;
+    };
+  </script>
+</body>
+</html>

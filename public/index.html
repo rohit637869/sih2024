@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DysPad UI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="css/testmode.css">
+
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="modes">
+                <button class="mode-btn" onclick="window.location='/wordspy.html'" >Gamified Mode</button>
+                <button class="mode-btn" onclick="window.location = '/training'">Training Mode</button>
+                <button class="mode-btn" onclick="window.location.reload()"> Restart</button>
+            </div>
+            <div class="progress-indicator">
+                Progress Indicator
+            </div>
+            <div class="logo">
+                DysPad
+                <div class="dropdown">
+                    <button class="btn mx-2 btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-three-dots-vertical"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Save</a></li>
+                      <li><a class="dropdown-item" href="#">Back</a></li>
+                      <hr>
+                      <li><a class="dropdown-item" href="#">Help ?</a></li>
+                    </ul>
+                  </div>
+            </div>
+        </div>
+
+        <!-- Title Section -->
+        <div class="title-section">
+            <span class="title">Tittle</span>
+        </div>
+
+        <!-- Main Writing Area -->
+        <div class="writing-area">
+            <div class="undo-redo inputs">
+                <button id="undoButton" class="undo-btn input"><i
+                    class="bi bi-arrow-90deg-right "></i></button>
+                <!-- <button onclick="showhidetoolbox()" class="btn btn-outline-danger" style="border-radius: 50%;"><i
+                    class="bi bi-pencil"></i></button>
+                <button class="btn btn-primary" style="border-radius: 50%;"><i
+                    class="bi bi-file-break-fill"></i></button> -->
+                    <input type="color" id="colorPicker" class="input" value="#000000">
+                    <input type="number" id="penWidth" class="input" min="1" max="50" value="5">
+
+                    <button id="eraserToggle"  class="input">Use Eraser</button>
+                    <button id="clearCanvas" class="input">Clear Canvas</button>
+
+
+
+            </div>
+            <div class="lines-area">
+                <div id="sidebar" class="d-flex d-md-block justify-content-between">
+                    
+
+
+                    <div id="canvas-container" style="min-height: 90vh;">
+
+                        <div class="body ">
+                            <div class="d-flex justify-content-between">
+                                <h2>Text You Write</h2>
+                            </div>
+                            <div id="viewer" style="font-size: 30px; border: 1px solid green;">
+                                <pre id="viewbox">
+            
+                                </pre>
+                            </div>
+                        </div>
+            
+                        <div class="body">
+                            <div class="d-flex align-items-center p-2 justify-content-between">
+                                <h2>Write Here</h2>
+                                
+            
+                            </div>
+                            <canvas width="1200" height="720" id="myCanvas"></canvas>
+                        </div>
+            
+                    </div>
+        
+        
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/ns.js"></script>
+</body>
+</html>

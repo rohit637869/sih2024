@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordspy game</title>
+    <link rel="stylesheet" href="css/wordspy.css">
+</head>
+<body>
+    <main>
+        <div class="gamepanel">
+            <div class="toppanel">
+                <h1 class="gametitle">WordspyGame</h1>
+                <div class="right">
+                    <img src="images/thinking.gif" style="width: 60px; margin: 0px 20px;" alt="">
+                    <h1 class="score" id="scoreview">Score : 0</h1>
+                </div>
+            </div>
+            <div class="toolpanel">
+                <button id="restartbtn">Restart</button>
+                <button id="undobtn">Undo</button>
+            </div>
+            <hr>
+            <div class="wordspanel" id="wordpanel">
+            </div>
+            <div class="gridbox" id="gridbox">
+                
+            </div>
+            <div class="bottompanel">
+                <p id="wordview">WordspyGame</p>
+                <p id="timeview">TimeView</p>
+
+            </div>
+        </div>
+    </main>
+
+    <div class="popupbar " id="popupbar">
+        <div class="dialogbox">
+            <!-- <div class="closebar">
+                <button id="closedialogbtn">X</button>
+            </div> -->
+            <div class="imagebar">
+                <div class="content">
+                    <h2 id="dialogtitle">Subject Title</h2>
+                    <hr>
+                    <p id="dialogdescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos aliquam minima vel tempora nobis corrupti animi nulla. 
+                    <div class="buttons" id="dialogbuttons">
+                        
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="images/mantorcharactor.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+<script src="js/wordspy.js"></script>
+</html>

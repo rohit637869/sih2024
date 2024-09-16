@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;box-sizing: border-box;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+}
+.gamepanel{
+    background-color: white;
+    min-width: 30vw;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.gametitle{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.toolpanel{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    
+
+}
+.wordspanel{
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    flex-wrap: wrap;
+}
+.wordspanel h4{
+    background-color: black;
+    color: white;
+    border-radius: 40px;
+    padding: 10px 15px;
+}
+.toolpanel button{
+    background: none;
+    border: none;
+    background-color: tomato;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 12px 15px;
+    border-radius: 40px;
+}
+.right{
+    display: flex;
+}
+.score{
+    background-color: white;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.toppanel{
+    background-color: limegreen;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bottompanel{
+    padding: 10px;
+    color: white;
+    background-color: tomato;
+    display: flex;
+    justify-content: space-between;
+}
+.gridbox{
+    display: grid;
+    grid-template-columns: auto  auto auto auto auto auto auto auto auto auto;
+    min-height: 600px;
+}
+.grid{
+    padding: 10px;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transition: 0.2s;
+}
+
+.grid:hover , .active{
+    color: white;
+    background-color: black;
+}
+.grid:active{
+    transition: 0s;
+    background-color: red;
+    color: white;
+}
+
+.popupbar{
+    background-color: rgba(0, 0, 0, 0.74);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.dialogbox{
+    /* display: flex; */
+    max-width: 30vw;
+    color: white;
+    /* border: 1px solid white; */
+}
+.dialogbox .closebar {
+    display: flex;
+    justify-content: end;
+}
+.dialogbox .closebar button{
+    background: none;
+    border: none;
+    padding: 12px;
+    background-color: tomato;
+    color: white;
+}
+.dialogbox .imagebar{
+    display: flex;
+    align-items: center;
+
+    
+}
+.dialogbox .imagebar .content{
+    padding: 12px;
+    background-color: wheat;
+    border-radius: 19px;
+    margin: 10px;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.dialogbox .imagebar .content .buttons{
+    display: flex;
+}
+.dialogbox .imagebar .content button{
+    background: none;
+    border: none;
+    color: white;
+    background-color: tomato;
+    padding: 12px 15px;
+    display: block;
+    margin: 10px;
+    text-align: center;
+    border-radius: 15px;
+    font-size: 19px;
+    width: 100%;
+}
+.dialogbox .imagebar .image img{
+    width: 300px;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .toppanel{
+        display: flex;
+        flex-direction: column;
+    }
+    .gamepanel{
+        width: 100vw;
+    }
+    .popupbar{
+        max-width: 100vw;
+    }
+    .dialogbox{
+        max-width: 100vw;
+    }
+    .dialogbox .imagebar{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
