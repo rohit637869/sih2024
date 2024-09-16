@@ -211,7 +211,7 @@ for (let i = 0; i < 150; i++) {
     grid.innerHTML=randomword
     grid.addEventListener("click",function(){
         makingword+=grid.innerHTML
-        grid.classList.add("active")
+        grid.classList.add("active")  
         makinggrids.push(grid)
         tabsound.play()
         
